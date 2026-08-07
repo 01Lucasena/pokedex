@@ -1,0 +1,58 @@
+.card {
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.spriteWrap {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sprite {
+  width: 96px;
+  height: 96px;
+  image-rendering: pixelated;
+}
+
+.number {
+  color: #9aa0a6;
+  font-size: 13px;
+  margin: 4px 0 0;
+}
+
+.name {
+  margin: 2px 0 8px;
+  font-size: 20px;
+  text-transform: capitalize;
+  color: #263238;
+}
+
+.typeRow {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.typeBadge {
+  padding: 4px 12px;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.statsBlock {
+  text-align: left;
+  margin-top: 8px;
+}
