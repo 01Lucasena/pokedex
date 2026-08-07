@@ -1,16 +1,64 @@
-# React + Vite
+# Pokédex
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma Pokédex simples feita em React, consumindo a [PokéAPI](https://pokeapi.co) para buscar informações de qualquer Pokémon em tempo real.
 
-Currently, two official plugins are available:
+## Deploy
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Acesse: [Pokedex (Lucas Sena)](https://pokedexls.netlify.app/)
 
-## React Compiler
+## Funcionalidades
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Busca por nome ou número
+- Exibe sprite, tipos e status base (HP, ataque, defesa, etc)
+- Estados de carregamento e erro tratados
+- Interface com tema retrô de Pokédex
 
-## Expanding the ESLint configuration
+## Tecnologias
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- CSS Modules
+- [PokéAPI](https://pokeapi.co)
+
+## Rodando localmente
+
+```bash
+git clone https://github.com/01Lucasena/pokedex.git
+cd pokedex
+npm install
+npm run dev
+```
+
+O projeto abre em `http://localhost:5173`.
+
+## Estrutura do projeto
+
+```
+src/
+├── components/
+│   ├── Pokedex/       # componente principal, busca e estados
+│   ├── PokemonCard/    # exibição dos dados do pokémon
+│   └── StatBar/         # barra de status individual
+├── constants/
+│   └── pokemonTypes.js  # cores dos tipos e labels dos status
+├── App.jsx
+└── main.jsx
+```
+
+## O que aprendi construindo isso
+
+- `useState` para gerenciar múltiplos estados (busca, resultado, loading, erro)
+- `fetch` com `async/await` e tratamento de erro com `try/catch/finally`
+- Renderização condicional para diferentes estados da UI
+- Composição de componentes e passagem de dados via props
+- CSS Modules para estilos isolados por componente
+
+## Próximos passos
+
+- [ ] Botão de Pokémon aleatório
+- [ ] Busca com lista de resultados
+- [ ] Exibir cadeia de evolução
+
+## Deploy
+
+Publicado no Netlify com deploy automático a cada push na branch principal.
